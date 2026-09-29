@@ -65,3 +65,11 @@ export function CloseIcon(props: IconProps) {
     </svg>
   );
 }
+
+export function StarSharpIcon(props: IconProps) {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M14.43 10 12 2l-2.43 8H2l6.18 4.41L5.83 22 12 17.31 18.18 22l-2.35-7.59L22 10h-7.57Z" />
+    </svg>
+  );
+}
