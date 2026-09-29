@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ByteSpace
 
-## Getting Started
+Landing page for **ByteSpace**, an online course platform, built from the "ByteSpace New" Figma design.
+Includes the full landing page plus the Login and Register pages.
 
-First, run the development server:
+**Live:** _added after deployment_
+
+## Tech stack
+
+- [Next.js 16](https://nextjs.org) (App Router) + React 19
+- TypeScript
+- Tailwind CSS v4
+- Fonts: Poppins (headings) and Satoshi (body)
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Command         | Description              |
+| --------------- | ------------------------ |
+| `npm run dev`   | Start the dev server     |
+| `npm run build` | Create a production build |
+| `npm run start` | Run the production build |
+| `npm run lint`  | Run ESLint               |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Pages
 
-## Learn More
+| Route       | Description                                   |
+| ----------- | --------------------------------------------- |
+| `/`         | Landing page                                  |
+| `/login`    | Sign in page                                  |
+| `/register` | Create account page                           |
 
-To learn more about Next.js, take a look at the following resources:
+## Project structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/                  # routes, layout, global styles
+│   ├── login/
+│   └── register/
+├── components/
+│   ├── auth/             # auth layout, form, inputs
+│   ├── home/             # landing page sections
+│   ├── layout/           # navbar, footer
+│   ├── ui/               # reusable pieces (Button, CourseCard, ...)
+│   └── icons.tsx
+├── data/                 # static content (courses, testimonials, ...)
+├── fonts/                # self-hosted Satoshi
+└── lib/
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Notes
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Colors and the type scale come from the style guide page in Figma and live in `src/app/globals.css` as Tailwind theme tokens
+  (`bg-primary-800`, `text-neutral-700`, `text-heading-m`, `text-body-l`, ...).
+- The design is 1440px wide. Decorative elements are positioned as offsets from the page center so the layout stays
+  balanced on wider screens. On smaller screens they are hidden or scaled down.
+- The soft background glows are plain CSS radial gradients (`src/lib/blob.ts`) instead of exported images.
+- All content is static and lives in `src/data`.
