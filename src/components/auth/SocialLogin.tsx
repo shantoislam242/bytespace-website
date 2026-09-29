@@ -9,9 +9,9 @@ export default function SocialLogin() {
   return (
     <div className="flex flex-col items-center gap-10">
       <div className="flex w-full items-center gap-[11px]">
-        <span className="h-px flex-1 bg-line" />
+        <span className="h-px flex-1 bg-line sm:w-[200px] sm:flex-none" />
         <span className="text-body-l text-muted">or</span>
-        <span className="h-px flex-1 bg-line" />
+        <span className="h-px flex-1 bg-line sm:w-[200px] sm:flex-none" />
       </div>
       <div className="flex gap-4">
         {providers.map((provider) => (
