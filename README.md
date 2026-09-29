@@ -3,7 +3,7 @@
 Landing page for **ByteSpace**, an online course platform, built from the "ByteSpace New" Figma design.
 Includes the full landing page plus the Login and Register pages.
 
-**Live:** _added after deployment_
+**Live:** https://bytespace-website-phi.vercel.app
 
 ## Tech stack
 
