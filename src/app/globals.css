@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: var(--font-satoshi), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+
+  /* Neutral / Black */
+  --color-neutral-50: #f5f5f6;
+  --color-neutral-100: #e5e6e8;
+  --color-neutral-200: #ced0d3;
+  --color-neutral-300: #abaeb5;
+  --color-neutral-400: #82868e;
+  --color-neutral-500: #666973;
+  --color-neutral-600: #585a62;
+  --color-neutral-700: #4b4c53;
+  --color-neutral-800: #424348;
+  --color-neutral-900: #3a3b3f;
+  --color-neutral-950: #242528;
+
+  /* Primary / Electric Violet */
+  --color-primary-50: #e7f6ff;
+  --color-primary-100: #d3eeff;
+  --color-primary-200: #b0ddff;
+  --color-primary-300: #81c5ff;
+  --color-primary-400: #4f9dff;
+  --color-primary-500: #2872ff;
+  --color-primary-600: #0445ff;
+  --color-primary-700: #0043ff;
+  --color-primary-800: #003be2;
+  --color-primary-900: #0b36a4;
+  --color-primary-950: #071e5f;
+
+  /* Secondary / Crimson */
+  --color-secondary-50: #fdffe4;
+  --color-secondary-100: #faffc5;
+  --color-secondary-200: #f2ff92;
+  --color-secondary-300: #e4ff54;
+  --color-secondary-400: #d4fb20;
+  --color-secondary-500: #cbfc01;
+  --color-secondary-600: #8cb400;
+  --color-secondary-700: #6a8902;
+  --color-secondary-800: #546b09;
+  --color-secondary-900: #465a0d;
+  --color-secondary-950: #243300;
+
+  /* One-off colors used in the design */
+  --color-ink: #040819;
+  --color-body: #4f4f4f;
+  --color-surface: #fafafa;
+  --color-muted: #888888;
+  --color-line: #d1d1d1;
+
+  /* Typography scale from the style guide */
+  --text-heading-l: 72px;
+  --text-heading-l--line-height: 1.2;
+  --text-heading-l--letter-spacing: -0.01em;
+  --text-heading-m: 44px;
+  --text-heading-m--line-height: 1.2;
+  --text-heading-m--letter-spacing: -0.01em;
+  --text-heading-s: 36px;
+  --text-heading-s--line-height: 1.2;
+  --text-heading-s--letter-spacing: -0.01em;
+  --text-heading-xs: 20px;
+  --text-heading-xs--line-height: 1.2;
+  --text-heading-xs--letter-spacing: -0.01em;
+
+  --text-body-l: 18px;
+  --text-body-l--line-height: 1.6;
+  --text-body-m: 16px;
+  --text-body-m--line-height: 1.6;
+  --text-body-s: 14px;
+  --text-body-s--line-height: 1.6;
+  --text-body-xs: 12px;
+  --text-body-xs--line-height: 1.6;
+
+  --text-label-l: 18px;
+  --text-label-l--line-height: 1.2;
+  --text-label-m: 16px;
+  --text-label-m--line-height: 1.2;
+  --text-label-s: 14px;
+  --text-label-s--line-height: 1.2;
+  --text-label-xs: 12px;
+  --text-label-xs--line-height: 1.2;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-white font-sans text-neutral-950;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility container-page {
+  @apply mx-auto w-full max-w-[1240px] px-5;
+}
+
+/* Blueprint style grid used on the blue sections */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.12) 2px, transparent 2px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.12) 2px, transparent 2px);
+  background-size: 120px 120px;
+  background-position: calc(50% + 59px) -1px;
 }
