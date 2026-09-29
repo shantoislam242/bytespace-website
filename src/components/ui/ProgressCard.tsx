@@ -1,13 +1,14 @@
 type ProgressCardProps = {
   label?: string;
   value: number;
+  relaxed?: boolean;
   className?: string;
 };
 
-export default function ProgressCard({ label = "Learning Progress", value, className = "" }: ProgressCardProps) {
+export default function ProgressCard({ label = "Learning Progress", value, relaxed = false, className = "" }: ProgressCardProps) {
   return (
     <div className={`w-[232px] rounded-2xl bg-white p-4 ${className}`}>
-      <p className="text-label-s font-medium text-neutral-950">{label}</p>
+      <p className={`text-sm font-medium text-neutral-950 ${relaxed ? "leading-6" : "leading-[1.2]"}`}>{label}</p>
       <p className="mt-2 font-heading text-5xl leading-[1.2] font-semibold tracking-[-0.01em] text-neutral-950">
         {value}%
       </p>
