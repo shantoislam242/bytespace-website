@@ -11,7 +11,7 @@ const partners = [
 export default function Partners() {
   return (
     <section aria-label="Our partners" className="bg-neutral-50">
-      <div className="container-page flex flex-wrap items-end justify-center gap-x-[72px] gap-y-8 py-14 lg:h-[202px] lg:flex-nowrap lg:pt-20 lg:pb-0">
+      <div className="container-page flex flex-wrap items-end justify-center gap-x-[72px] gap-y-8 py-14 lg:flex-nowrap lg:py-20">
         {partners.map((partner, index) => (
           <Image
             key={partner.src}
