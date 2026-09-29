@@ -23,7 +23,7 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid items-start gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-[41px]">
+        <div className="grid items-start gap-10 md:grid-cols-2 lg:grid-cols-[repeat(3,374px)] lg:justify-between lg:gap-0">
           {testimonials.map((testimonial) => (
             <TestimonialCard key={testimonial.name} {...testimonial} />
           ))}
