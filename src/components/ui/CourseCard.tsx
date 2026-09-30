@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SignalIcon, StarRoundedIcon, StarSharpIcon } from "@/components/icons";
 import type { Course } from "@/data/courses";
 import { enrolledAvatars } from "@/data/people";
@@ -16,7 +17,7 @@ export default function CourseCard({ course, variant = "default", className = ""
   const meta = [`${course.lessons} Lessons`, course.duration, `${course.comments} Comments`];
 
   return (
-    <article className={`relative rounded-3xl border border-neutral-200 bg-white p-[15px] pb-5 ${className}`}>
+    <article className={`relative rounded-3xl border border-neutral-200 bg-white p-[15px] pb-5 transition-shadow hover:shadow-lg ${className}`}>
       <div className="relative h-[195px] overflow-hidden rounded-xl bg-[#443131]">
         <Image
           src={course.image}
@@ -46,7 +47,10 @@ export default function CourseCard({ course, variant = "default", className = ""
               isShowcase ? "leading-7" : ""
             }`}
           >
-            {course.title}
+            {/* Only one course has a detail page in the design, so every card opens it */}
+            <Link href="/courses/build-digital-asset" className="after:absolute after:inset-0 after:rounded-3xl">
+              {course.title}
+            </Link>
           </h3>
           <p className={`text-xs text-body ${isShowcase ? "leading-5" : "leading-[1.6]"}`}>
             by <span className="text-primary-800">{course.author}</span>
