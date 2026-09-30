@@ -87,6 +87,37 @@
   body {
     @apply bg-white font-sans text-neutral-950;
   }
+
+  /*
+   * The design is drawn for a 1440px screen. On bigger monitors the whole page
+   * is scaled up so it doesn't look tiny in the middle of the screen.
+   * Up to 1440px nothing changes.
+   */
+  @media (min-width: 1600px) {
+    html {
+      zoom: 1.1;
+    }
+  }
+  @media (min-width: 1800px) {
+    html {
+      zoom: 1.25;
+    }
+  }
+  @media (min-width: 2200px) {
+    html {
+      zoom: 1.4;
+    }
+  }
+  @media (min-width: 2500px) {
+    html {
+      zoom: 1.6;
+    }
+  }
+  @media (min-width: 3200px) {
+    html {
+      zoom: 2;
+    }
+  }
 }
 
 @utility container-page {
