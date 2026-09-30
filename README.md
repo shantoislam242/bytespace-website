@@ -1,7 +1,7 @@
 # ByteSpace
 
-Landing page for **ByteSpace**, an online course platform, built from the "ByteSpace New" Figma design.
-Includes the full landing page plus the Login and Register pages.
+Website for **ByteSpace**, an online course platform, built from the "ByteSpace New" Figma design.
+Includes every page from the design: landing page, course search, course details (about, lessons, reviews), creator profile, login, register and a custom 404 page.
 
 **Live:** https://bytespace-website-phi.vercel.app
 
@@ -30,21 +30,31 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Pages
 
-| Route       | Description                                   |
-| ----------- | --------------------------------------------- |
-| `/`         | Landing page                                  |
-| `/login`    | Sign in page                                  |
-| `/register` | Create account page                           |
+| Route                                  | Description                  |
+| -------------------------------------- | ---------------------------- |
+| `/`                                    | Landing page                 |
+| `/courses`                             | Course search                |
+| `/courses/build-digital-asset`         | Course details (About tab)   |
+| `/courses/build-digital-asset/lessons` | Course details (Lessons tab) |
+| `/courses/build-digital-asset/reviews` | Course details (Reviews tab) |
+| `/creators/purepearl-studio`           | Creator profile              |
+| `/login`                               | Sign in                      |
+| `/register`                            | Create account               |
+| any unknown URL                        | Custom 404 page              |
 
 ## Project structure
 
 ```
 src/
 ├── app/                  # routes, layout, global styles
+│   ├── courses/          # search + [slug] details with lessons/reviews tabs
+│   ├── creators/[slug]/
 │   ├── login/
 │   └── register/
 ├── components/
 │   ├── auth/             # auth layout, form, inputs
+│   ├── course/           # course hero, sidebar, tabs, ratings
+│   ├── creator/
 │   ├── home/             # landing page sections
 │   ├── layout/           # navbar, footer
 │   ├── ui/               # reusable pieces (Button, CourseCard, ...)
@@ -60,5 +70,6 @@ src/
   (`bg-primary-800`, `text-neutral-700`, `text-heading-m`, `text-body-l`, ...).
 - The design is 1440px wide. Decorative elements are positioned as offsets from the page center so the layout stays
   balanced on wider screens. On smaller screens they are hidden or scaled down.
+- On monitors wider than 1600px the whole page is scaled up with CSS `zoom` so it does not look tiny.
 - The soft background glows are plain CSS radial gradients (`src/lib/blob.ts`) instead of exported images.
 - All content is static and lives in `src/data`.
