@@ -22,7 +22,7 @@ export default function CourseCard({ course, variant = "default", className = ""
           src={course.image}
           alt={course.title}
           fill
-          sizes="(min-width: 1024px) 341px, (min-width: 768px) 45vw, 90vw"
+          sizes="(min-width: 1800px) 480px, (min-width: 1024px) 341px, (min-width: 768px) 45vw, 90vw"
           className="object-cover"
         />
         <ul className="absolute top-[150px] left-3 flex gap-3">
