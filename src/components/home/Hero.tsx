@@ -31,7 +31,7 @@ export default function Hero() {
           width={1444}
           height={1378}
           preload
-          sizes="(min-width: 1024px) 722px, 500px"
+          sizes="(min-width: 2500px) 1156px, (min-width: 1800px) 903px, (min-width: 1024px) 722px, 500px"
           className="absolute top-0 left-1/2 w-[400px] max-w-none -translate-x-1/2 sm:w-[500px] lg:top-[509px] lg:left-[calc(50%-310px)] lg:w-[722px] lg:translate-x-0"
         />
 

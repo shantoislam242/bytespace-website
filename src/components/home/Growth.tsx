@@ -98,7 +98,7 @@ export default function Growth() {
               alt="Student learning online with a laptop"
               width={1442}
               height={1376}
-              sizes="721px"
+              sizes="(min-width: 1800px) 1010px, 721px"
               className="absolute top-[9px] left-[-21px] w-[721px] max-w-none"
             />
             <ProgressCard value={55} relaxed className="absolute top-[213px] left-[345px]" />
@@ -121,7 +121,7 @@ export default function Growth() {
               alt="Course creator holding a tablet"
               width={1158}
               height={1488}
-              sizes="579px"
+              sizes="(min-width: 1800px) 811px, 579px"
               className="absolute top-[-3px] left-[7px] w-[579px] max-w-none"
             />
             <HappyStudentsCard compact className="absolute top-[413px] left-[283px]" />
