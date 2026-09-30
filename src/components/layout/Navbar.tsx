@@ -7,8 +7,8 @@ import Logo from "@/components/ui/Logo";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Courses", href: "#courses" },
-  { label: "Creators", href: "#creators" },
+  { label: "Courses", href: "/courses" },
+  { label: "Creators", href: "/creators/purepearl-studio" },
 ];
 
 export default function Navbar() {

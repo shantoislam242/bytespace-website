@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-[92px]">
           <div className="flex max-w-[528px] flex-col gap-[45px]">
             <div className="flex flex-col gap-4">
-              <Logo variant="dark" className="mt-[7px] self-start" />
+              <Logo variant="dark" className="mb-0.5 self-start" />
               <p className="text-body-s">
                 Stay Up to date with our latest features and releases by joining our newsletter.
               </p>

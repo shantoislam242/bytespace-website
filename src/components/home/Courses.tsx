@@ -1,7 +1,7 @@
 import CourseCard from "@/components/ui/CourseCard";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { courses } from "@/data/courses";
-import TopicTabs from "./TopicTabs";
+import TopicTabs from "@/components/ui/TopicTabs";
+import { courses, courseTopics } from "@/data/courses";
 
 export default function Courses() {
   return (
@@ -17,7 +17,7 @@ export default function Courses() {
       />
 
       <div className="mt-[42px]">
-        <TopicTabs />
+        <TopicTabs rows={courseTopics} showMore />
       </div>
 
       <div className="mt-[77px] grid gap-10 md:grid-cols-2 lg:grid-cols-3">
