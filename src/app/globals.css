@@ -118,6 +118,44 @@
       zoom: 2;
     }
   }
+
+  /*
+   * Auth pages are a single screen, so they should never need scrolling.
+   * They only scale up when the screen is tall enough to fit the 944px frame.
+   */
+  body:has([data-layout="auth"]) {
+    @apply bg-grid bg-primary-800;
+  }
+  @media (min-width: 1600px) {
+    html:has([data-layout="auth"]) {
+      zoom: 1;
+    }
+  }
+  @media (min-width: 1600px) and (min-height: 1040px) {
+    html:has([data-layout="auth"]) {
+      zoom: 1.1;
+    }
+  }
+  @media (min-width: 1800px) and (min-height: 1180px) {
+    html:has([data-layout="auth"]) {
+      zoom: 1.25;
+    }
+  }
+  @media (min-width: 2200px) and (min-height: 1322px) {
+    html:has([data-layout="auth"]) {
+      zoom: 1.4;
+    }
+  }
+  @media (min-width: 2500px) and (min-height: 1511px) {
+    html:has([data-layout="auth"]) {
+      zoom: 1.6;
+    }
+  }
+  @media (min-width: 3200px) and (min-height: 1888px) {
+    html:has([data-layout="auth"]) {
+      zoom: 2;
+    }
+  }
 }
 
 @utility container-page {

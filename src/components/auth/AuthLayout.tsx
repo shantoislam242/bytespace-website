@@ -11,7 +11,7 @@ type AuthLayoutProps = {
 
 export default function AuthLayout({ title, description, children }: AuthLayoutProps) {
   return (
-    <main className="bg-grid min-h-screen bg-primary-800 lg:h-[1024px] lg:min-h-0">
+    <main data-layout="auth" className="bg-grid min-h-screen bg-primary-800 lg:h-[944px] lg:min-h-0">
       <div className="container-page relative flex flex-col gap-10 pt-[35px] pb-16 lg:block lg:h-full lg:p-0">
         <Link href="/" aria-label="Back to home" className="self-start lg:absolute lg:top-[35px] lg:left-[22px]">
           <Image src="/logo-mark.svg" alt="ByteSpace" width={29} height={32} preload />
